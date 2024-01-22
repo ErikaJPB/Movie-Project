@@ -1,0 +1,17 @@
+button {
+  background-color: red;
+  color: white;
+}
+
+button:hover {
+  background-color: red;
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+
+h5 {
+  color: white;
+}
