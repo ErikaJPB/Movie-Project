@@ -20,8 +20,14 @@
 
 .rowposter {
   display: flex;
-  overflow-y: hidden;
   overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 20px;
+  width: 100%;
+}
+
+.rowposter img {
+  margin-right: 8px;
 }
 
 .rowimg {
