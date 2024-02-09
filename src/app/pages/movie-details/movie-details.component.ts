@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
 import { MovieApiServiceService } from 'src/app/service/movie-api-service.service';
 
 @Component({
@@ -11,7 +12,9 @@ import { MovieApiServiceService } from 'src/app/service/movie-api-service.servic
 export class MovieDetailsComponent implements OnInit {
   constructor(
     private movieApiService: MovieApiServiceService,
-    private router: ActivatedRoute
+    private router: ActivatedRoute,
+    private sanitizer: DomSanitizer,
+    private http: HttpClient
   ) {}
 
   getMovieDetailById: any;
@@ -42,6 +45,15 @@ export class MovieDetailsComponent implements OnInit {
         }
       });
     });
+  }
+
+  getTrailerUrl() {
+    if (this.getMovieVideoById) {
+      // const videoUrl = `https://www.themoviedb.org/video/play?key=${this.getMovieVideoById}`;
+      const videoUrl = `https://www.youtube.com/embed/${this.getMovieVideoById}`;
+      return this.sanitizer.bypassSecurityTrustResourceUrl(videoUrl);
+    }
+    return '';
   }
 
   getMovieCast(id: any) {
