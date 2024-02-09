@@ -7,23 +7,15 @@
   object-fit: cover;
 }
 
-.carousel-caption {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
 .carousel-caption h2 {
   color: #f44336;
-  font-size: 50px;
+  font-size: 3vw;
   font-weight: bolder;
 }
 
 .carousel-caption p {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 2vw;
 }
 
 .rowposter {
@@ -58,13 +50,4 @@
 
 .rowposter::-webkit-scrollbar {
   display: none;
-}
-
-.movie-description-box {
-  background-color: rgba(0, 0, 0, 0.7); /* Dark background color */
-  color: white; /* White text color */
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 800px; /* Adjust as needed */
-  margin: 0 auto; /* Center the box horizontally */
 }

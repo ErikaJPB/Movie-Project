@@ -1,7 +1,7 @@
-<div class="contain mt-5 p-5">
+<div class="container mt-5 p-5">
   <form [formGroup]="searchForm" (ngSubmit)="submitForm()">
     <div class="row">
-      <div class="mb-3 col-lg-10">
+      <div class="col-lg-10 col-md-9 col-sm-9 col-8 mb-3">
         <input
           type="text"
           class="form-control"
@@ -10,16 +10,19 @@
         />
       </div>
 
-      <div class="col-lg-2">
+      <div class="col-lg-2 col-md-3 col-sm-3 col-4">
         <button class="btn btn-md">Search</button>
       </div>
     </div>
   </form>
 
   <div class="row mt-5">
-    <div class="col-lg-4" *ngFor="let inputSearch of searchResult">
+    <div
+      class="col-lg-4 col-md-6 col-sm-12"
+      *ngFor="let inputSearch of searchResult"
+    >
       <div class="row">
-        <div class="col-lg-3 mt-4 mb-4" *ngIf="inputSearch.poster_path">
+        <div class="col-4 mt-4 mb-4" *ngIf="inputSearch.poster_path">
           <img
             src="https://image.tmdb.org/t/p/original/{{
               inputSearch.poster_path
@@ -28,7 +31,7 @@
             [routerLink]="['/movie', inputSearch.id]"
           />
         </div>
-        <div class="col-lg-9 mt-4 mb-4">
+        <div class="col-8 mt-4 mb-4">
           <h5>{{ inputSearch.original_title }}</h5>
         </div>
       </div>

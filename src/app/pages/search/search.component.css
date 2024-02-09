@@ -4,12 +4,11 @@ button {
 }
 
 button:hover {
-  background-color: red;
-  color: white;
+  background-color: darkred;
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   cursor: pointer;
 }
 
