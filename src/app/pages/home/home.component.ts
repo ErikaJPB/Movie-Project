@@ -39,14 +39,12 @@ export class HomeComponent implements OnInit {
 
   bannerData(): any {
     this.movieService.bannerApiData().subscribe((data) => {
-      console.log(data);
       this.bannerResult = data.results;
     });
   }
 
   trendingData(): any {
     this.movieService.trendingApiData().subscribe((data) => {
-      console.log(data);
       this.trendingResult = data.results;
     });
   }
@@ -54,7 +52,6 @@ export class HomeComponent implements OnInit {
   // Action Movies
   actionMovies() {
     this.movieService.getActionMovies().subscribe((data) => {
-      console.log(data);
       this.actionMoviesResult = data.results;
     });
   }
@@ -62,7 +59,6 @@ export class HomeComponent implements OnInit {
   // Thriller Movies
   thrillerMovies(): any {
     this.movieService.getThrillerMovies().subscribe((data) => {
-      console.log(data);
       this.thrillerMoviesResult = data.results;
     });
   }
@@ -70,7 +66,6 @@ export class HomeComponent implements OnInit {
   // Comedy Movies
   comedyMovies(): any {
     this.movieService.getComedyMovies().subscribe((data) => {
-      console.log(data);
       this.comedyMoviesResult = data.results;
     });
   }
@@ -78,7 +73,6 @@ export class HomeComponent implements OnInit {
   // Romance Movies
   romanceMovies(): any {
     this.movieService.getRomanceMovies().subscribe((data) => {
-      console.log(data);
       this.romanceMoviesResult = data.results;
     });
   }
@@ -86,7 +80,6 @@ export class HomeComponent implements OnInit {
   // Animation Movies
   animationMovies(): any {
     this.movieService.getAnimationMovies().subscribe((data) => {
-      console.log(data);
       this.animationMoviesResult = data.results;
     });
   }
@@ -94,7 +87,6 @@ export class HomeComponent implements OnInit {
   // Adventure Movies
   adventureMovies(): any {
     this.movieService.getAdventureMovies().subscribe((data) => {
-      console.log(data);
       this.adventureMoviesResult = data.results;
     });
   }
@@ -102,7 +94,6 @@ export class HomeComponent implements OnInit {
   // Family Movies
   familyMovies(): any {
     this.movieService.getFamilyMovies().subscribe((data) => {
-      console.log(data);
       this.familyMoviesResult = data.results;
     });
   }
@@ -110,7 +101,6 @@ export class HomeComponent implements OnInit {
   // Drama Movies
   dramaMovies(): any {
     this.movieService.getDramaMovies().subscribe((data) => {
-      console.log(data);
       this.dramaMoviesResult = data.results;
     });
   }
@@ -118,7 +108,6 @@ export class HomeComponent implements OnInit {
   // Science Fiction Movies
   scienceFictionMovies(): any {
     this.movieService.getScienceFictionMovies().subscribe((data) => {
-      console.log(data);
       this.scienceFictionMoviesResult = data.results;
     });
   }
@@ -126,7 +115,6 @@ export class HomeComponent implements OnInit {
   // Documentary Movies
   documentaryMovies(): any {
     this.movieService.getDocumentaryMovies().subscribe((data) => {
-      console.log(data);
       this.documentaryMoviesResult = data.results;
     });
   }

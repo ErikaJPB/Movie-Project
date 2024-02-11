@@ -16,14 +16,12 @@ export class SearchComponent {
   constructor(private movieApiService: MovieApiServiceService) {}
 
   submitForm() {
-    console.log(this.searchForm.value);
     this.movieApiService.getSearchMovie(this.searchForm.value).subscribe(
       (result) => {
-        console.log(result);
         this.searchResult = result.results;
       },
       (error) => {
-        console.log(error);
+        console.error(error.message);
       }
     );
   }
